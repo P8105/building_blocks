@@ -2,7 +2,7 @@
 title: "Simple but really neat document"
 author: Jeff Goldsmith
 date: 2024-09-10
-output: html_document
+output: github_document
 ---
 
 ```{r, echo = FALSE, message = FALSE}
