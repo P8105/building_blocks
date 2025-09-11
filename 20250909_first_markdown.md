@@ -1,44 +1,41 @@
----
-title: "Simple document"
-author: "Jeff Goldsmith"
-date: 2025-09-11
-output: github_document
----
+Simple document
+================
+Jeff Goldsmith
+2025-09-11
 
-I'm an R Markdown document! 
+I’m an R Markdown document!
 
-```{r echo = TRUE, message = FALSE}
+``` r
 library(tidyverse)
 ```
 
-
 # Section 1
 
-Here's a **code chunk** that samples from 
-a _normal distribution_:
+Here’s a **code chunk** that samples from a *normal distribution*:
 
-```{r}
+``` r
 samp = rnorm(100)
 length(samp)
 ```
 
+    ## [1] 100
+
 # Section 2
 
-I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
+I can take the mean of the sample, too! The mean is 0.1077488.
 
 # Section 3
 
-This is where I'm going to talk about code chunks.
+This is where I’m going to talk about code chunks.
 
-```{r eval = FALSE}
+``` r
 mean(samp)
 sd(samp)
 ```
 
-Let's also make a dataframe.
+Let’s also make a dataframe.
 
-```{r}
+``` r
 example_df = 
   tibble(
     vec_numeric = 1:4,
@@ -47,9 +44,9 @@ example_df =
   )
 ```
 
-I'll create a new dataframe.
+I’ll create a new dataframe.
 
-```{r}
+``` r
 new_df = 
   tibble(
     x = rnorm(100),
@@ -57,9 +54,9 @@ new_df =
   )
 ```
 
-Let's make a plot and see how cool that is!
+Let’s make a plot and see how cool that is!
 
-```{r}
+``` r
 plot_df = 
   tibble(
     x = rnorm(1000, mean = 1, sd = .5),
@@ -68,5 +65,7 @@ plot_df =
 
 ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 ```
+
+![](20250909_first_markdown_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 This is a neat scatterplot!!!
